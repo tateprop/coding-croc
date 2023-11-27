@@ -1,0 +1,268 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+body{
+    background-color: #31572c;
+    font-family: 'Roboto', sans-serif;
+}
+.header{
+    display: flex;
+    justify-content: center;
+}
+.nav-bar{
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 10px 30px;
+    align-items: center;
+}
+.logo{
+    font-size: 32px;
+    color: #90a955;
+    font-weight: 600;
+    padding: 5px 20px;
+}
+
+.menu>a{
+    font-size: 24px;
+    text-decoration: none;
+    background-color: #90a955;
+    color: #ecf39e;
+    font-weight: 600;
+    padding: 5px 20px;
+    border-radius: 20px;
+    transition: all 200ms ease;
+}
+.menu>a:hover{
+    background-color: #ecf39e;
+    color: #90a955;
+
+}
+.title-centered{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    min-height: 80vh;
+    background-color: transparent;
+    position: absolute;
+}
+.title-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.title{
+    font-size: 52px;
+    max-width: 300px;
+    font-weight: 400;
+    color: #90a955;
+}
+.title>strong{
+    font-size: 56px;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+.subtitle{
+    font-size: 20px;
+    margin-top: 20px;
+    max-width: 300px;
+    font-weight: 300;
+    color: #90a955;
+}
+.doodle-container-center{
+    display: flex;
+    justify-content: center;
+}
+.doodle-container{
+    transition: all 1000ms ease;
+    position: fixed;
+    display: flex;
+    height: 80vh;
+    background: transparent;
+    z-index: 1;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.doodle{
+    position: relative;
+    width: 10vh;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+.doodle1{
+    left: 22vw;
+    top: 2vh;
+    transform: rotate(25deg)
+}
+.doodle2{
+    right: 25vw;
+    top: -2vh;
+    transform: rotate(-15deg)
+}
+.doodle3{
+    right: 32vw;
+    top: 3vh;
+    transform: rotate(20deg)
+}
+.doodle4{
+    left: 32vw;
+    top: -2vh;
+    transform: rotate(25deg)
+}
+.doodle5{
+    right: 27vw;
+    top: 1vh;
+    transform: rotate(10deg)
+}
+.doodle6{
+    left: 26vw;
+    top: -4vh;
+    transform: rotate(-25deg)
+}
+.doodle7{
+    right: 36vw;
+    top: 2vh;
+    transform: rotate(-10deg)
+}
+.doodle8{
+    left: 31vw;
+    top: -10vh;
+    transform: rotate(5deg)
+}
+.doodle9{
+    left: 28vw;
+    top: 30vh;
+    transform: rotate(-10deg)
+}
+.doodle10{
+    right: 30vw;
+    top: 18vh;
+    transform: rotate(20deg)
+}
+.step1{
+    margin-top: 100vh;
+    min-height: 100vh;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.step1-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.grid-container{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    width: 90vw;
+    max-width: 1000px;
+    gap: 1rem;
+    margin: 40px 0;
+    height: 60vh;
+}
+.step-header{
+    font-size: 52px;
+    color: #90a955;
+    text-align: center;
+}
+.grid{
+    border-radius: 20px;
+    flex: 0 1 auto;
+    filter: drop-shadow(3px 5px 4px rgb(0 0 0 / 0.3));
+}
+.elem1{
+    width: calc(33% - 1rem);
+    height: 100%;
+    background-color: #84a98cd0;
+}
+.elem2{
+    width: calc(66% - 1rem);
+    height: calc(50% - 1rem);
+    background-color: #354f5290;
+}
+.elem3{
+    position: relative;
+    top: -50%;
+    margin-left: 33%;
+    width: calc(33% - 1rem);
+    height: calc(50% - 1rem);
+    background-color: #2f3e46d0;
+}
+.elem4{
+    position: relative;
+    top: -50%;
+    width: calc(33% - 1rem);
+    height: calc(50% - 1rem);
+    background-color: #52796fd0;
+}
+/* If anyone reads this i'm quite aware that the method above is ironicly bad considering the header of this page */
+.step2{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.step2-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 80vw;
+}
+.card-container{
+    max-width: 1000px;
+    background-color: #ecf39e;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: black;
+    color: #132a13;
+    display: flex;
+    flex-direction: row;
+    filter: drop-shadow(3px 5px 4px rgb(0 0 0 / 0.3));
+}
+.card-accent{
+    width: 15px;
+    border-radius: 8px 0 0 8px;
+    background-color: #132a13;
+    flex: 0 0 auto;
+}
+.card-content{
+    padding: 10px;
+    margin-right: 30px;
+}
+.card-content>h3{
+    font-size: 32px;
+}
+.card-content>h4{
+    font-size: 18px;
+    font-weight: 400;
+}
+.card-content>h5{
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+.card-content>h6{
+    font-size: 18px;
+    font-weight: 400;
+}
+.card-container-row{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-around;
+}
