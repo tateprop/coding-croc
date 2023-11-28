@@ -77,75 +77,65 @@ body{
     font-weight: 300;
     color: #90a955;
 }
-.doodle-container-center{
-    display: flex;
-    justify-content: center;
-}
+
 .doodle-container{
     transition: all 1000ms ease;
     position: fixed;
-    display: flex;
     height: 80vh;
     background: transparent;
-    z-index: 1;
-    flex-flow: column wrap;
-    justify-content: center;
+    z-index: 1;  
 }
 
 .doodle{
-    position: relative;
+    position: absolute;
     width: 10vh;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    left: 0px;
+    animation: rotation 2s infinite linear;
 }
 .doodle1{
-    left: 22vw;
-    top: 2vh;
-    transform: rotate(25deg)
+    animation: rotation 1600ms infinite linear;
 }
 .doodle2{
-    right: 25vw;
-    top: -2vh;
-    transform: rotate(-15deg)
+    animation: rotation 1700ms infinite linear;
 }
 .doodle3{
-    right: 32vw;
-    top: 3vh;
-    transform: rotate(20deg)
+    animation: rotation 1800ms infinite linear;
 }
 .doodle4{
-    left: 32vw;
-    top: -2vh;
-    transform: rotate(25deg)
+    animation: rotation 1900ms infinite linear;
 }
 .doodle5{
-    right: 27vw;
-    top: 1vh;
-    transform: rotate(10deg)
+    animation: rotation 2100ms infinite linear;
 }
 .doodle6{
-    left: 26vw;
-    top: -4vh;
-    transform: rotate(-25deg)
+    animation: rotation 1500ms infinite linear;
 }
 .doodle7{
-    right: 36vw;
-    top: 2vh;
-    transform: rotate(-10deg)
+    animation: rotation 1400ms infinite linear;
 }
 .doodle8{
-    left: 31vw;
-    top: -10vh;
-    transform: rotate(5deg)
+    animation: rotation 1300ms infinite linear;
 }
 .doodle9{
-    left: 28vw;
-    top: 30vh;
-    transform: rotate(-10deg)
+    animation: rotation 2200ms infinite linear;
 }
 .doodle10{
-    right: 30vw;
-    top: 18vh;
-    transform: rotate(20deg)
+    animation: rotation 2400ms infinite linear;
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(9deg);
+    }
+    75% {
+        transform: rotate(-7deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 .step1{
     margin-top: 100vh;
