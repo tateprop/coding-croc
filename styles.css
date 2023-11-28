@@ -91,7 +91,7 @@ body{
     width: 10vh;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
     left: 0px;
-    transition: all 1000ms ease;
+    transition: all 1500ms ease;
 }
 .doodle1{
     animation: rotation 1600ms infinite linear;
@@ -175,12 +175,12 @@ body{
 .elem1{
     width: calc(33% - 1rem);
     height: 100%;
-    background-color: #84a98cd0;
+    background-color: #132a13d0;
 }
 .elem2{
     width: calc(66% - 1rem);
     height: calc(50% - 1rem);
-    background-color: #354f5290;
+    background-color: #90a955d0;
 }
 .elem3{
     position: relative;
@@ -188,14 +188,14 @@ body{
     margin-left: 33%;
     width: calc(33% - 1rem);
     height: calc(50% - 1rem);
-    background-color: #2f3e46d0;
+    background-color: #ecf39ed0;
 }
 .elem4{
     position: relative;
     top: -50%;
     width: calc(33% - 1rem);
     height: calc(50% - 1rem);
-    background-color: #52796fd0;
+    background-color: #4f772dd0;
 }
 /* If anyone reads this i'm quite aware that the method above is ironicly bad considering the header of this page */
 .step2{
@@ -218,7 +218,7 @@ body{
     border-style: solid;
     border-radius: 10px;
     border-width: 1px;
-    border-color: black;
+    border-color: #132a13;
     color: #132a13;
     display: flex;
     flex-direction: row;
@@ -255,4 +255,92 @@ body{
     flex-direction: row;
     gap: 10px;
     justify-content: space-around;
+}
+.step3{
+    min-height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+}
+.step3-container-center{
+    background-color: #90a955;
+    display: flex;
+    justify-content: center;
+}
+
+.step3-container{
+    margin: 0 20px;
+    width: 80vw;
+    max-width: 1000px;
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: space-between;
+}
+.step3-content{
+    width: 60%;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.step3-content>h3{
+    font-size: 64px;
+    font-weight: 700;
+    color: #ecf39e;
+    filter: drop-shadow(5px 5px 0px #132a13ff);
+}
+.step3-content>h4{
+    padding: 20px 0;
+    color: #ecf39e;
+    font-size: 18px;
+}
+.step3-images{
+    width: 40%;
+    padding-bottom: 40%;
+    overflow: hidden;
+    position: relative;
+}
+.step3-images img {
+    left: 0;
+    position: absolute;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+}
+
+
+@keyframes fade {
+    0% {transform: translateX(100%);opacity: 1;}
+    20% {transform: translateX(0%);opacity: 1;}
+    33% {transform: translateX(0%);opacity: 0.8;}
+    53% {transform: translateX(100%);opacity: 0;}
+    100% {transform: translateX(100%);opacity: 0;}
+}
+
+#img2 {
+    animation-delay: -10s;
+}
+#img3 {
+    animation-delay: -5s;
+
+}
+.footer{
+    background-color: #132a13;
+    display: flex;
+    justify-content: center;
+}
+.footer-container{
+    margin: 20px;
+    width: 80vw;
+    max-width: 1000px;
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: space-between;
+}
+.footer-container>h6{
+    color: #ecf39e;
+    font-size: 14px;
 }

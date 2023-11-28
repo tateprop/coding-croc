@@ -63,7 +63,6 @@ function placeDoodles(centerPoint){
         coordinates = getCoordinates(centerPoint, screen.height/10, elemList ,padding)
         if (coordinates[0]){
             elemList.push(coordinates)
-            console.log(coordinates)
             document.getElementsByClassName(doodleName)[0].style.left = Math.round(coordinates[0]/screen.width*100)+ "vw"
             document.getElementsByClassName(doodleName)[0].style.top = Math.round(coordinates[1]/screen.height*100) + "vh"
         } 
@@ -85,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function myFunction() {
     let scrolled = document.body.scrollTop || document.documentElement.scrollTop;
-    if (!(scrolled % 20)){
+    if (!(scrolled % Math.round(screen.height/40))){
         let starty = screen.height/6
         let startx = (screen.width < 500) ? screen.width/5 : screen.width/3
         let endx = (screen.width < 500) ? screen.width/5*4: startx + 600
