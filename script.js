@@ -57,6 +57,7 @@ let centerPoint;
 let padding;
 function placeDoodles(centerPoint){
     padding = 200;
+    elemList = []
     for (let a = 0; a < 10; a++){
         doodleName = "doodle" + (a+1)
         coordinates = getCoordinates(centerPoint, screen.height/10, elemList ,padding)
@@ -76,9 +77,19 @@ document.addEventListener("DOMContentLoaded", function() {
     let starty = screen.height/6
     let startx = (screen.width < 500) ? screen.width/5 : screen.width/3
     let endx = (screen.width < 500) ? screen.width/5*4: startx + 600
-    console.log([startx, starty, endx * 2, starty*3])
-    console.log(screen.width)
-    console.log(screen.height)
     centerPoint = [startx, starty, endx + 600, starty*3]
     placeDoodles(centerPoint);
   });
+
+  window.onscroll = function() {myFunction()};
+
+  function myFunction() {
+    let scrolled = document.body.scrollTop || document.documentElement.scrollTop;
+    if (!(scrolled % 20)){
+        let starty = screen.height/6
+        let startx = (screen.width < 500) ? screen.width/5 : screen.width/3
+        let endx = (screen.width < 500) ? screen.width/5*4: startx + 600
+        centerPoint = [startx, starty, endx + 600, starty*3]
+        placeDoodles(centerPoint);
+    }
+}
