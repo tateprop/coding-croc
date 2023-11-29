@@ -210,7 +210,8 @@ body{
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    max-width: 80vw;
+    max-width: 1000px;
+    width: 80vw;
 }
 .card-container{
     max-width: 1000px;
@@ -232,10 +233,10 @@ body{
 }
 .card-content{
     padding: 10px;
-    margin-right: 30px;
 }
 .card-content>h3{
     font-size: 32px;
+    padding: 10px 0;
 }
 .card-content>h4{
     font-size: 18px;
@@ -249,20 +250,50 @@ body{
 .card-content>h6{
     font-size: 18px;
     font-weight: 400;
+    margin: 10px 0;
 }
 .card-container-row{
     display: flex;
     flex-direction: row;
     gap: 10px;
     justify-content: space-around;
+    max-width: 80vw;
+    width: 1000px;
+
 }
+.small-card{
+    width: 33%;
+    height: 100%;
+}
+.small-card >.card-content{
+    height: fit-content;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-self: center;
+}
+.small-card > .card-content > img{
+    width: 50%;
+    padding: 15px 0;
+    align-self: center;
+}
+.small-card:last-of-type > .card-content > img{
+    width: 100%;
+    margin: -25% 0;
+    align-self: center;
+}
+.small-card:first-of-type > .card-content > img{
+    width: 70%;
+    margin: -10% 0;
+    align-self: center;
+}
+
 .step3{
     min-height: 100vh;
     max-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 
 }
 .step3-container-center{
@@ -343,4 +374,54 @@ body{
 .footer-container>h6{
     color: #ecf39e;
     font-size: 14px;
+}
+@media only screen and (max-width: 700px) {
+    .grid-container{
+        flex-flow: nowrap column;
+    }
+    .grid{
+        flex: 1;
+        width: auto;
+        height: auto;
+        top: 0;
+        margin: 0;
+    }
+    .small-card{
+        width: auto;
+        height: auto;
+    }
+    .card-container-row{
+        flex-direction: column;
+    }
+    .small-card > .card-content > img{
+        display: none;
+    }
+    .step2{
+        margin-bottom: 70PX;
+    }
+    .step3{
+        max-height: none;
+        margin-bottom: 140px;
+    }
+    .step3-container{
+        margin: 0;
+        flex-direction: column;
+    }
+    .step3-content{
+        width: auto;
+    }
+    .step3-images{
+        align-self: center;
+        width: auto;
+        padding: 0 0 20px 0;
+    }
+    .step3-images >img{
+        position: relative;
+        animation-name: none;
+        width: 30%;
+    
+    }
+    .nav-bar{
+        margin: 10px 10px 0 0;
+    }
 }
