@@ -1,8 +1,9 @@
 # coding-croc
-I have a rough idea of what i want this to look like.
-I'm effectively raw dogging the design but i guess we'll see if it workds out.
+This repo is for all the projects i create while still learning - basically nooby shiz
 
-
-Based on:
-givingli.com
-swagapp.com
+Lessons learned:
+From Coding is easy:
+1 - My JS is terrible in here it was written at a time when i didnt understand much.
+2 - I did desktop first development then added modile. I know this is not the convention but it felt very natural. I'll have to get used to the correct way.
+3 - My CSS is not all that clean there's parts i could have reused - re-use classes
+4 - That shadow effect adds a LOT and a consistant colour pallete is pretty nice too.
