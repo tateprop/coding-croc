@@ -14,8 +14,8 @@ function addGrid(n){
     }
 }
 function getValue(){
-    let elem = document.querySelector("#gridInput")
-    let gridSize = elem.value
-    elem.value = ""
-    addGrid(gridSize)
+    let elem = document.querySelector("#gridInput");
+    let gridSize = elem.value;
+    elem.value = "";
+    (+gridSize <= 100) ? addGrid(gridSize) : "";
 }
