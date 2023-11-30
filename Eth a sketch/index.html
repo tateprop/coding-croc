@@ -13,12 +13,28 @@
 <body>
     <div class="main-container">
         <h1>Etch-a-sketch</h1>
-        <div class="grid-container border">
-
-        </div>
+        <div class="grid-container border"></div>
         <div class="input-container border">
-            <div><input id="gridInput" type="text" placeholder="Enter a number 1-100"></div>
+            <div class="input">
+                <input id="gridInput" type="text" placeholder="Enter a number 1-100">
+            </div>
             <div class="button" onclick="getValue()">Generate grid</div>
+            <div class="option-container">
+                <div class="wrap">
+                    <h1>Color</h1>
+                    <div class="colorpicker"><input type="color" id="colorpicker" value="#000000"></div>
+                </div>
+                <div id="random" class="button" onclick="setRandomMode()">Random: Off</div>
+                <div id="eraser" class="button" onclick="setEraserMode()">Eraser: Off</div>
+                <div class="slider-container">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="gridSlider">
+                    <h3 id="sliderValue">Grid size: 50</h3>   
+                </div>
+                <div class="button" onclick="getValue()">Generate grid</div>
+            </div>
         </div>
 </body>
 </html>
+
+
+ 
