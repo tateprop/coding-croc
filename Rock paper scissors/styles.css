@@ -56,6 +56,7 @@ body{
     background-color: var(--color-2);
     background-color: var(--color-4);
     filter: drop-shadow(3px 5px 2px var(--color-1));
+    padding-bottom: 10px;
 }
 
 .image-container{
@@ -64,7 +65,10 @@ body{
     justify-content: space-around;
     gap: 10px;
 }
-.image-container>img{
+.player-container > .image-container >img:hover{
+    cursor: pointer;
+}
+.icon{
     width: 30%;
     padding: 5px;
     filter: drop-shadow(3px 5px 2px var(--color-1));
@@ -76,10 +80,15 @@ body{
     padding: 10px 0;
     text-align: center;
     font-size: 32px;
+    line-height: 15px;
 }
-.computer-container > .image-container >img{
-    width: 50%;
+.red-outline{
+    filter: drop-shadow(3px 3px 5px rgba(255, 0, 0));
 }
+.green-outline{
+    filter: drop-shadow(3px 3px 5px rgb(0, 255, 0));
+}
+
 @media only screen and (min-width: 700px){
     .player-container, .computer-container{
         width: 50%;
@@ -104,5 +113,14 @@ body{
     .outcome-container{
         order: 4;
         width: 100%;
+    }
+    .image-container{
+        padding: 5% 0;
+    }
+    .computer-container > .image-container{
+        padding: 0;
+    }
+    .computer-container > .image-container > img{
+        width: 40%;
     }
 }

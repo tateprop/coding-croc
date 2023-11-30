@@ -16,16 +16,19 @@
             <h1>Rock Paper Scissors!!</h1>
             <div class="player-container border">
                 <div class="image-container">
-                    <img class="border" src="images/doodle-01.svg" alt="">
-                    <img class="border" src="images/doodle-01.svg" alt="">
-                    <img class="border" src="images/doodle-01.svg" alt="">
+                    <img id="rock" class="border icon" src="images/rock.svg" onclick="parsePlayerChoice('rock')" role="button">
+                    <img id="paper" class="border icon" src="images/paper.svg" onclick="parsePlayerChoice('paper')" role="button">
+                    <img id="scissors" class="border icon" src="images/scissors.svg" onclick="parsePlayerChoice('scissors')" role="button">
                 </div>
                 <h3 class="normal-text" id="instruction">Pick an option</h3>
             </div>
-            <div class="outcome-container"><h2 class="normal-text" id="outcome">You Win!</h2></div>
+            <div class="outcome-container">
+                <h2 class="normal-text" id="outcome"></h2>
+                <h2 class="normal-text" id="score"></h2>
+            </div>
             <div class="computer-container border">
                 <div class="image-container">
-                    <img class="border" src="images/doodle-01.svg" alt="">
+                    <img id="computerChoice" class="border icon" src="images/paper.svg" alt="">
                 </div>
                 <h3 class="normal-text" id="instruction">Computer Choice</h3>
             </div>
