@@ -12,3 +12,5 @@ From rock paper scissors:
 1 - My javascript has gotten a bit better
 2 - this was not that hard which is reassuring
 3 - I did mobile first development and it was easier i think.
+
+Etch a sketch was easy banged it out in about an hour
