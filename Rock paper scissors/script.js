@@ -8,11 +8,25 @@ let scoreBoard = {
     playerScore : 0,
     computerScore : 0,
 }
+let welcomeMessage = "Lets Play!!"
 
-function initiateGameLoop(welcomeMessage){
+function initiateGameLoop(){
+    let popupElem = document.querySelector(".popup-container")
+    popupElem.style.display = "none"
     setElementText("outcome", welcomeMessage)
+    setElementText("score", "")
 }
-
+function endGame(){
+    let newGameMessage = (scoreBoard.playerScore == 5) ? "You Won the Game" : "You Lost the Game :("
+    let newGameMessageCont = (scoreBoard.playerScore == 5) ? "That's a pretty awesome achievement. Well done!" : "Lmao you lost. Loooooooooserrrrr!"
+    scoreBoard.playerScore = 0
+    scoreBoard.computerScore = 0
+    let popupElem = document.querySelector(".popup-container")
+    popupElem.style.display = "flex"
+    setElementText("gameStatus", newGameMessage)
+    setElementText("gameMessage", newGameMessageCont)
+    clearAllFilters()
+}
 function clearAllFilters(){
     let idList = ["computerChoice", "rock", "paper", "scissors"];
     for (let i = 0; i < idList.length; i++) {
@@ -30,11 +44,7 @@ function parsePlayerChoice(playerChoice){
     setElementText("score", currentScore)
 
     if (scoreBoard.playerScore == 5 || scoreBoard.computerScore ==5){
-        let newGameMessage = (scoreBoard.playerScore == 5) ? "Well done you won the game!" : "Oops looks like you lost. Play again?"
-        scoreBoard.playerScore = 0
-        scoreBoard.computerScore = 0
-        clearAllFilters()
-        initiateGameLoop(newGameMessage)
+        endGame()
     }
 }
 function processDraw(){
@@ -67,5 +77,5 @@ function setElementText(id,text){
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    initiateGameLoop("Lets Play!!")
+    initiateGameLoop(welcomeMessage)
 });
