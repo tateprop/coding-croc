@@ -14,3 +14,7 @@ From rock paper scissors:
 3 - I did mobile first development and it was easier i think.
 
 Etch a sketch was easy banged it out in about an hour
+
+I'm going to be coding the same game of chess in javascript untill i dont have to goole stuff and im actually good
+Tries:
+1 - Massive brain fog today brain is hardly working i've coded the piece motion but the code is very bad and unorganised im starting over without finishing
