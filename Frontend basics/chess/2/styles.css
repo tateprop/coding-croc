@@ -24,6 +24,12 @@
     height: 100%;
     padding: 5px;
 }
-.piece-image:hover{
+.board-square:hover{
     cursor: pointer;
+}
+.highlight{
+    background-color: yellow;
+}
+.c-highlight{
+    background-color: red;
 }
