@@ -12,10 +12,11 @@ const negatives = [[1,1], [-1,-1], [1,-1], [-1,1]];
 
 //This is ugly and gross but i couldnt get class variables to work
 let SELETED = ""
+let TURN = "white"
 /////////////
 
 // To Do
-// 1 game loop with turns
+// 1 game loop with turns - DONE
 // 2 fix pawn motion
 // 3 add check detection
 // 4 ceck mate detection
@@ -58,7 +59,6 @@ class Piece{
             }
             pieceMoveExpanded["pawn"] = pawnMoves
         }
-        console.log(pieceMoveExpanded["pawn"])
         let pieceDict = pieceMoveExpanded[this.pieceName]
         for (let i = 0; i < pieceDict.length; i++) {
             let moveTree = pieceDict[i];
@@ -85,6 +85,7 @@ class Piece{
     }
 }
 class Board{
+    check = false
     constructor(index){
         this.index = index
         this.row = this.setRow()
@@ -92,6 +93,7 @@ class Board{
         this.color = this.setColor()
         this.piece = this.setPiece()
         this.selected = false
+        
     }
     setRow(){
         return Math.trunc(this.index/8)
@@ -115,13 +117,13 @@ class Board{
     }
     movePiece(){
         //static
-        console.log(SELETED)
         let prevIndex = SELETED.parent.index
         boardSquares[prevIndex].piece = null
         this.piece = SELETED
         this.piece.parent = this
         this.piece.hasMoved = true
         SELETED = ""
+        this.check = this.isCheck()
     }
 }
 function updateBoard(){
@@ -173,12 +175,14 @@ function clickBoard(index){
     if (square.selected){
         square.movePiece()
         skip = true
+        TURN = TURN == "white" ? "black" : "white"
     }
     for (let i = 0; i < boardSquares.length; i++) {
         let element = boardSquares[i];
         element.selected = false
     }
-    if (square.piece && !skip){
+    console.log(TURN)
+    if (square.piece && !skip && TURN == square.piece.pieceColor){
         square.piece.getMoves()
         
     }
