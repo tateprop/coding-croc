@@ -1,0 +1,65 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --height: 100vh;
+    --width: 100%;
+  }
+
+body { 
+  font-family: sans-serif; 
+  background-color: antiquewhite;
+}
+
+.scene {
+  width: var(--width);
+  height: var(--height);
+  perspective: calc(var(--height)/1.5);
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  scale: 1;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(calc(-1 * var(--height)/2));
+  transition: transform 4s;
+}
+
+@keyframes pullout {
+  0%   {scale: 1;}
+  35%  {scale: 0.6;}
+  100% {scale: 1;}
+}
+@keyframes pullout1 {
+  0%   {scale: 1;}
+  35%  {scale: 0.6;}
+  100% {scale: 1;}
+}
+
+
+.cube.show-front  { 
+  transform: translateZ(calc(-1 * var(--height)/2)) rotateY(   0deg); 
+  animation: pullout 4s;
+}
+.cube.show-bottom { 
+  transform: translateZ(calc(-1 * var(--height)/2)) rotateX(  90deg);
+  animation: pullout1 4s;
+}
+
+.cube__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.front  { background: hsla(  0, 100%, 50%, 0.7); }
+.bottom { background: hsla(300, 100%, 50%, 0.7); }
+
+.front  { transform: rotateY(  0deg) translateZ(calc(var(--height)/1.9)); }
+.bottom { transform: rotateX(-90deg) translateZ(calc(var(--height)/1.9)); }
