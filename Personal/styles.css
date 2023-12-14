@@ -7,6 +7,7 @@
 :root {
     --height: 100vh;
     --width: 100%;
+    --background-color: grey
   }
 
 body { 
@@ -68,14 +69,17 @@ body {
   background-color: grey;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .header-container{
-  width: 100%;
-  height: 100%;
+  position: relative;
+  width: 95%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  overflow: hidden;
 }
 .logo{
   z-index: 1;
@@ -85,9 +89,53 @@ body {
   color: white;
   font-size: 24px;
 }
-.content-container{
-  background-color: darkgrey;
+.border-container{
+  background: transparent;
   width: 100%;
+  height: 100%;
   max-width: 1000px;
-  margin: auto 0;
+  margin: auto;
+  border: 20px solid #0000;
+  border-radius: 20px;
+  background: linear-gradient(grey, grey) padding-box, linear-gradient(
+        var(--angle),
+        #070707,
+        #687aff
+      ) border-box;
+  animation: 8s rotate linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.cover{
+  position: absolute;
+  width: 70%;
+  height: 250%;
+  max-width: 1000px;
+  background: grey;
+  transform: rotate(45deg);
+  top: -800%;
+  left: 30%;
+  
+}
+.content-container{
+  position: absolute;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  max-width: 960px;
+  background: darkgray;
+  margin: auto;
+  top: 20px;
+  border-radius: 10px;
+  
 }
